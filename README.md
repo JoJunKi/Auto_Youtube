@@ -37,3 +37,19 @@ flowchart LR
 
 자세한 흐름은 [아키텍처](docs/ARCHITECTURE.md), 공개 범위는
 [보안 문서](docs/SECURITY.md)를 참고하세요.
+
+## 사용 기술
+
+- 대본: LLM 기반 Story Packet → A/B 친구 대화 생성
+- 음성: `Qwen3-TTS 0.6B Base` Voice Clone, A/B 고정 음색
+- 대체 음성 후보: `GPT-SoVITS`
+- 입 모양: `Rhubarb Lip Sync`
+- 영상 조합: `FFmpeg`
+- 차트·지수판·썸네일: Python, Pillow, 시장 데이터 API
+- 수집: Telegram 클라이언트, 웹 수집기, YouTube 자막 수집기
+- 게시: YouTube Data API, Instagram Graph API
+- 실행: Windows Task Scheduler, 단계별 영수증과 재시작 지점
+
+구체적인 모델과 역할은 [기술 스택](docs/TECH_STACK.md), 단계별 데이터 흐름은
+[상세 파이프라인](docs/PIPELINE.md)을 참고하세요.
+
