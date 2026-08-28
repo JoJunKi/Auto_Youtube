@@ -24,3 +24,18 @@ A/B 음색을 고정해 TTS를 생성하고 차트, 지수판, 캐릭터 장면�
 
 롱폼과 각 숏폼의 실제 대본 범위에서 제목, 설명, 태그, 해시태그를 생성합니다. 게시
 영수증을 저장해 중복 업로드를 막습니다.
+
+## 설계 경계
+
+```text
+Collectors -> Normalized Items -> Story Groups -> Story Packets
+          -> Dialogue Script -> Deterministic Validation
+          -> TTS + Visual Assets -> Long-form
+          -> Topic Clips -> Shorts / Reels
+          -> Platform Metadata -> Publish Receipts
+```
+
+각 단계는 파일 산출물과 완료 영수증을 남깁니다. 따라서 음성 합성까지 끝난 상태에서
+차트나 자막만 수정할 경우 전체 작업을 다시 실행하지 않고 해당 단계부터 재개할 수
+있습니다.
+
