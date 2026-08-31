@@ -55,5 +55,7 @@ flowchart LR
 - 뉴스 DB: SQLite 온라인 백업으로 수집 중에도 일관된 일별 스냅샷 생성
 
 구체적인 모델과 역할은 [기술 스택](docs/TECH_STACK.md), 단계별 데이터 흐름은
-[상세 파이프라인](docs/PIPELINE.md)을 참고하세요.
+[상세 파이프라인](docs/PIPELINE.md), 주말 재고 제작은
+[해외영상 파이프라인](docs/WEEKEND_PIPELINE.md), 실제 발행 규칙은
+[한국 시간 기준 일정](docs/PUBLISHING_SCHEDULE.md)을 참고하세요.
 

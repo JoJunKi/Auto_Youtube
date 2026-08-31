@@ -34,3 +34,7 @@ shorts and upload receipts remain in the episode directory. The queue publisher 
 - Target ready inventory: 6 episodes
 - Normal publishing: Monday, Saturday and Sunday at noon KST
 - Market-holiday fallback: consume one ready episode in the unused morning slot
+
+The publisher is fail-closed: it only accepts `state=ready`, `publish=true`, and rejects
+`upload_blocked=true`. A long form, thumbnail, description, and exactly six rendered short forms
+must all exist before the episode can leave the inventory queue.
