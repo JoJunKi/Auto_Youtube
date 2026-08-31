@@ -1,7 +1,8 @@
 # Auto YouTube Market Pipeline
 
 미국 시장 뉴스와 가격 데이터를 바탕으로 한국어 대화형 롱폼, Shorts, Instagram
-Reels를 자동 제작·게시하는 파이프라인의 공개 구조입니다.
+Reels를 자동 제작·게시하고, 주 3회 해외 경제 영상 번역·해설을 재고 방식으로 제작하는
+파이프라인의 공개 구조입니다.
 
 ```mermaid
 flowchart LR
@@ -49,6 +50,9 @@ flowchart LR
 - 수집: Telegram 클라이언트, 웹 수집기, YouTube 자막 수집기
 - 게시: YouTube Data API, Instagram Graph API
 - 실행: Windows Task Scheduler, 단계별 영수증과 재시작 지점
+- 반복 대본 모델: OpenAI API `gpt-5.6-luna`
+- 주말형 콘텐츠: 사전 선정한 해외 영상 3개 → 원본 핵심 구간 → A/B 해설 → 롱폼·숏폼
+- 뉴스 DB: SQLite 온라인 백업으로 수집 중에도 일관된 일별 스냅샷 생성
 
 구체적인 모델과 역할은 [기술 스택](docs/TECH_STACK.md), 단계별 데이터 흐름은
 [상세 파이프라인](docs/PIPELINE.md)을 참고하세요.
